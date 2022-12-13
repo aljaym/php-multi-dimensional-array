@@ -1,8 +1,8 @@
 # Working with multi dimensional array in php 
 
-1. To use updateInventory.
+1. To use updateInventoryTest.php
 
-If product is new and not yet existing in 1st array simply add it and if item is already in 1st array you'll just need to update the inventory count in 1st array 0 index.
+If product not yet existing in 1st array simply add it and if item is already in 1st array you'll just need to update the inventory count in 1st array 0 index.
 
 eg.
 ```php
@@ -22,4 +22,47 @@ $newInv = [
 ];
 
 print_r(updateInventory($curInv, $newInv));
+```
+
+Sample Result
+```php
+Array
+(
+    [0] => Array
+        (
+            [0] => 88
+            [1] => Bowling Ball
+        )
+
+    [1] => Array
+        (
+            [0] => 2
+            [1] => Dirty Sock
+        )
+
+    [2] => Array
+        (
+            [0] => 3
+            [1] => Hair Pin
+        )
+
+    [3] => Array
+        (
+            [0] => 5
+            [1] => Microphone
+        )
+
+    [4] => Array
+        (
+            [0] => 3
+            [1] => Half-Eaten Apple
+        )
+
+    [5] => Array
+        (
+            [0] => 7
+            [1] => Toothpaste
+        )
+
+)
 ```
