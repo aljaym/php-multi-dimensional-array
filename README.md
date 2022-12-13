@@ -1,6 +1,6 @@
-# Workingg with multi dimensional array in php 
+# Working with multi dimensional array in php 
 
-To use updateInventory.
+1. To use updateInventory.
 
 If product is new and not yet existing in 1st array simply add it and if item is already in 1st array you'll just need to update the inventory count in 1st array 0 index.
 
