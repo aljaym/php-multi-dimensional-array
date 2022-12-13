@@ -1,0 +1,16 @@
+<?php
+function updateInventory(array $arr1, array $arr2) : array {
+	$mergedArray = array_merge_recursive($arr1, $arr2);
+	
+	$finalInventory = [];
+	foreach ($mergedArray as $key => $value) {
+		if (in_array($value[1], array_column($finalInventory, 1))) {
+			$key = array_search($value[1], array_column($finalInventory, 1));
+		
+		    $finalInventory[$key][0] = $value[0] + $finalInventory[$key][0];
+		} else {
+		    $finalInventory[] = $value;
+		}
+	}
+	return $finalInventory;
+}
